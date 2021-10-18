@@ -1,2 +1,2 @@
 # Gitrepository
- Primer repositorio
+ Mi Primer repositorio con git y github
