@@ -1,0 +1,138 @@
+<!--
+    Autor: Ramiro Ramirez Ramirez
+    Fecha de creación:20 de Abril 2022
+    Fecha de Actualización: 11 de Mayo de 2022
+    Descripción:
+-->  
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel ="stylesheet" href="../resources/css/estilo.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a  class="nav-link" href="../InventarioProductos?action=crearForm">Crear Producto</a></li>
+                    <li><a class="nav-link" href="../InventarioProductos?action=listar">Lista de Productos</a></li>
+                    <li><a href="/Restaurant/pages/menu.jsp">Menú</a></li>
+                     <li><a class="nav-link" href="../InventarioProductos?action=listar">Reservaciones</a></li>
+                      <li><a href="/Restaurant/pages/Contacto.jsp">Contacto</a></li>
+                </ul>
+                <h1 class="logo">Restaurant Mi Pueblito</h1>
+            </div>
+        </nav>
+        <section class="showcase-area" id="showcase" >
+            <div class="showcase-container">
+                <h1 class="main-title" id="home">El mejor lugar para comer</h1>
+                <p>Lo mejor de los platillos al gusto de tu paladar.</p>
+                <a href="#food-menu" class="btn btn-primary">Menu</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-wrapper container">
+                <div class="about-text">
+                    <p class="small">¿Quienes somos?</p>
+                    <h2>Somos el mejor Restaurant de la region!!!.</h2>
+                    <p>
+                       La mejor comida tradicional, el mejor lugar para convivir con los amigos, con la familia o pareja, 
+                       contamos con una gran variedad de platillos y bebidas.
+                       
+                    </p>
+                </div>
+                <div class="about-img">
+                     <img src="../resources/Image/Postal.jpg"  width="600" height="100">
+                </div>
+            </div>
+        </section>
+        <section id="food">
+            <h2>Tipos de comida</h2>
+            <div class="food-container container">
+                <div class="food-type fruite">
+                    <div class="img-container">
+                         <img src="../resources/Image/Capuchino.jpg" style=" width:100%">
+                        <div class="img-content">
+                            <h3>Postres</h3>
+                            <a
+                                class="btn btn-primary"
+                                target="blank"
+                                >leer más</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="food-type vegetable">
+                    <div class="img-container">
+                         <img src="../resources/Image/Enchiladas_suizas.jpg" style=" width:100%">
+                        <div class="img-content">
+                            <h3>Platillos</h3>
+                            <a
+                                class="btn btn-primary"
+                                target="blank"
+                                >leer más</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="food-type grin">
+                    <div class="img-container">
+                         <img src="../resources/Image/Bebida.jpg" style=" width:100%">
+                        <div class="img-content">
+                            <h3>Bebidas</h3>
+                            <a
+                                class="btn btn-primary"
+                                target="blank"
+                                >leer más</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer id="footer">
+            <h2>Restaurant &copy; Mi pueblito</h2>
+        </footer>
+    </body>
+    <!-- 
+      .................../ JS Code for smooth scrolling /...................... -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on("click", function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $("html, body").animate(
+                            {
+                                scrollTop: $(hash).offset().top,
+                            },
+                            800,
+                            function () {
+                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                window.location.hash = hash;
+                            }
+                    );
+                } // End if
+            });
+        });
+    </script>
+</html>
